@@ -117,6 +117,13 @@ b,strong{font-weight:700}
 .callout.teal{background:var(--teal-soft);border-left-color:var(--teal-ink)}
 .callout p{margin:0;max-width:none}
 
+.work{list-style:none;padding:0;margin:6px 0 22px;display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:640px) and (max-width:999px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}.work li:last-child{grid-column:1 / -1}}
+@media (min-width:1000px){.work{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.work li{background:#fff;border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px}
+.work b{font-size:2.1rem;font-weight:800;line-height:1;color:var(--blue-ink);font-variant-numeric:tabular-nums}
+.work span{font-size:1rem;color:var(--ink-2);line-height:1.45}
+@media (max-width:639px){.work li{flex-direction:row;align-items:center;gap:14px}.work b{min-width:64px;font-size:1.9rem}}
 /* Capítulo 1 */
 .photo-banner{margin:0 0 18px}
 .photo-banner button{all:unset;display:block;cursor:zoom-in;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);width:100%}
@@ -166,17 +173,6 @@ figcaption{font-size:1rem;color:var(--ink-2);margin-top:10px}
 .annot img{width:100%}
 .mark{position:absolute;border:3px solid #E5484D;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.75);pointer-events:none}
 .mark-label{position:absolute;background:#B42318;color:#fff;font:700 12px Montserrat,sans-serif;padding:3px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}
-
-.ba{position:relative;max-width:720px;margin:22px auto 0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:450/298;background:#fff;user-select:none}
-.ba .layer{position:absolute;inset:0}
-.ba img{width:100%;height:100%;object-fit:cover}
-.ba .after{clip-path:inset(0 0 0 50%)}
-.placeholder{width:100%;height:100%;display:grid;place-items:center end;text-align:center;padding:16px 6% 16px 16px;background:repeating-linear-gradient(45deg,var(--teal-soft) 0 14px,#fff 14px 28px);color:var(--teal-ink);font-weight:700}
-.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);transform:translateX(-50%);pointer-events:none}
-.ba .handle::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:var(--blue-ink);display:grid;place-items:center;font-weight:800;box-shadow:var(--shadow)}
-.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-.ba .lab{position:absolute;top:10px;font:700 12px Montserrat,sans-serif;background:rgba(10,15,92,.85);color:#fff;padding:3px 9px;border-radius:999px}
-.ba .lab.l{left:10px}.ba .lab.r{right:10px;background:var(--teal-ink)}
 
 /* Tabla comparativa */
 .tbl{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
@@ -292,7 +288,7 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
 @media print{
   @page{size:A4;margin:12mm}
   body{font-size:11.5pt}
-  .nav,.skip,.hero .btn,.ba,.menu-btn{display:none!important}
+  .nav,.skip,.hero .btn,.menu-btn{display:none!important}
   .hero{min-height:auto;padding:30px 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .band{padding:24px 0}
   .js .reveal{opacity:1!important;transform:none!important}
@@ -369,7 +365,15 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
 <section class="band soft" id="cap1" aria-labelledby="cap1-t">
   <div class="wrap">
     <div class="chapter-head reveal"><div class="num" aria-hidden="true">1</div><div><div class="lbl">Capítulo 1</div><h2 id="cap1-t">Lo que CLIFIN ya tiene</h2></div></div>
-    <p class="intro reveal">Revisamos con calma su Instagram, su Facebook, Google y las clínicas de la zona. Esto es lo que vimos.</p>
+    <p class="intro reveal">Antes de proponerle algo, estudiamos a fondo cómo se ve CLIFIN hoy en internet y cómo se ven las clínicas que compiten con usted. Este fue el trabajo:</p>
+    <ul class="work reveal" aria-label="Trabajo realizado para esta propuesta">
+      <li><b data-count="52">52</b><span>publicaciones de Instagram revisadas una por una, con sus vistas, "me gusta" y comentarios</span></li>
+      <li><b>+70</b><span>publicaciones de Facebook analizadas, de marzo a noviembre de 2026</span></li>
+      <li><b data-count="7">7</b><span>clínicas de Sonsonate, Santa Ana y San Salvador comparadas con CLIFIN</span></li>
+      <li><b data-count="6">6</b><span>búsquedas reales en Google y Google Maps, como las haría un paciente</span></li>
+      <li><b data-count="8">8</b><span>clínicas de fisioterapia que hoy hacen publicidad en Facebook e Instagram en El Salvador</span></li>
+    </ul>
+    <p class="intro reveal">Y esto es lo que encontramos.</p>
 
     <figure class="photo-banner reveal">
       <button type="button" class="lb-open" data-full="assets/ej-fotos-reales.png" data-caption="Estas fotos reales de su equipo son su mejor material. Hay que usarlas mucho más." aria-label="Ampliar: fotos reales del equipo de CLIFIN">
@@ -456,22 +460,6 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
       </button>
       <figcaption>Vista del perfil de Instagram: el título queda cortado ("olver al eporte", "uviste na cirugía?"). Al abrir cada publicación, el afiche se ve completo.</figcaption>
     </figure>
-
-    <!-- =========================================================
-         DESLIZADOR ANTES / DESPUÉS
-         Para activarlo con el afiche rediseñado:
-         1) Guarde la imagen nueva en assets/ (ej.: assets/afiche-rediseñado.png),
-            idealmente con la misma proporción que la de "antes" (450×298).
-         2) Reemplace el <div class="placeholder">…</div> de la capa "after"
-            por: <img src="assets/afiche-rediseñado.png" alt="Afiche rediseñado de CLIFIN">
-         ========================================================= -->
-    <div class="ba reveal" id="ba" aria-label="Comparación antes y después del afiche">
-      <div class="layer before"><img src="assets/ej-flyers-cortados.png" alt="Antes: afiches actuales con el título cortado"></div>
-      <div class="layer after"><div class="placeholder">[AFICHE REDISEÑADO]<br>Aquí irá la nueva versión</div></div>
-      <span class="lab l">Antes</span><span class="lab r">Después</span>
-      <div class="handle" aria-hidden="true"></div>
-      <input type="range" min="0" max="100" value="50" aria-label="Deslizar para comparar antes y después">
-    </div>
 
     <div class="sub-head reveal"><div class="eyebrow">La competencia</div><h3>Cómo está CLIFIN frente a otras clínicas</h3></div>
     <p class="intro reveal">En la zona hay pocas clínicas haciendo bien las cosas en internet. Eso es una gran oportunidad.</p>
@@ -818,14 +806,6 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
     });
   });
   selectTab(0);
-
-  /* --- Antes / después --- */
-  var ba = document.getElementById('ba');
-  if(ba){
-    var rng = ba.querySelector('input'), after = ba.querySelector('.after'), handle = ba.querySelector('.handle');
-    function setBA(){ var v = rng.value; after.style.clipPath = 'inset(0 0 0 ' + v + '%)'; handle.style.left = v + '%'; }
-    rng.addEventListener('input', setBA); setBA();
-  }
 
   /* --- Lightbox --- */
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap'), lastBtn = null;
