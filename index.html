@@ -232,6 +232,24 @@ td.dash{color:var(--muted)}
 .goal .fill.zero{background:transparent}
 .goal .fill.zero b{color:var(--ink-2)}
 
+/* Expectativas realistas */
+.real{grid-template-columns:1fr}
+@media (min-width:760px){.real{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.real h4,.budget h4{font-size:1.05rem;margin:2px 0 6px;color:var(--blue-ink)}
+.real p{font-size:1rem;color:var(--ink-2);margin:0 0 10px}
+.real p:last-child{margin-bottom:0}
+.small-chips li{font-size:.92rem;padding:5px 12px;background:var(--bg-soft)}
+.budget{margin-top:16px;border-top:6px solid var(--teal-ink)}
+.budget p{color:var(--ink-2)}
+.budget-rows{display:grid;gap:14px;margin:14px 0 18px}
+.brow{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"amt val" "bar bar";gap:6px 12px;align-items:center}
+.bamt{grid-area:amt;font-weight:800;color:var(--blue-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.brange{grid-area:bar;position:relative;height:16px;border-radius:999px;background:#E9EEF4}
+.brange span{position:absolute;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,var(--teal),var(--blue))}
+.bval{grid-area:val;justify-self:end;text-align:right;font-weight:700;color:var(--ink);font-size:1rem}
+@media (min-width:760px){.brow{grid-template-columns:110px 1fr 230px;grid-template-areas:"amt bar val"}.bval{justify-self:start;text-align:left}}
+.bnote{font-size:1rem;margin:0;padding:14px 16px;border-radius:14px;background:var(--amber-soft);color:var(--ink)!important;max-width:none}
+
 /* Capítulo 4 */
 .price{display:grid;gap:16px;grid-template-columns:1fr}
 @media (min-width:640px){.price{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -571,6 +589,41 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
       </div>
     </div>
     <p class="reveal" style="margin-top:18px;color:var(--ink-2)">Le enviaremos un resumen sencillo cada mes: qué hicimos, qué pasó y qué haremos el mes siguiente.</p>
+
+    <!-- Expectativas realistas -->
+    <div class="sub-head reveal" id="realistas"><div class="eyebrow">Hablemos claro</div><h3 style="font-size:clamp(1.3rem,3.8vw,1.7rem)">Seamos realistas: sin magia, con método</h3></div>
+    <p class="intro reveal">Preferimos decirle las cosas como son desde el inicio. En marketing no existen las fórmulas mágicas ni los resultados de un día para otro. Lo que sí le ofrecemos es <b>trabajo constante, medido y enfocado en lo que a usted le importa: que más personas escriban a CLIFIN y agenden su cita.</b></p>
+
+    <div class="grid real">
+      <article class="card icard reveal">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+        <div><h4>Enfocados en citas, no en "me gusta"</h4><p>Cada publicación y cada anuncio tiene un objetivo: que la persona correcta le escriba por WhatsApp. Los "me gusta" ayudan, pero lo que medimos es cuántos mensajes llegan y cuántos se convierten en pacientes.</p></div>
+      </article>
+      <article class="card icard reveal">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></div>
+        <div><h4>Los resultados dependen de varios factores</h4><p>Trabajamos para traer resultados, pero estos van de la mano con:</p>
+          <ul class="chips small-chips" aria-label="Factores que influyen en los resultados"><li>El presupuesto invertido en publicidad</li><li>Las tendencias del momento</li><li>La temporada del año</li><li>Lo que hace la competencia</li><li>La rapidez para responder WhatsApp</li><li>El material que se graba cada mes</li></ul></div>
+      </article>
+      <article class="card icard reveal">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M17 5l1 2 2 .3-1.5 1.4.4 2.1-1.9-1-1.9 1 .4-2.1L14 7.3l2-.3 1-2Z"/></svg></div>
+        <div><h4>Las creadoras de contenido suman, pero cada una es distinta</h4><p>Una colaboración con una creadora suele traer visitas y curiosidad que la publicidad pagada a veces no logra, porque la gente confía en quien ya sigue. Pero cada colaboración es diferente: <b>no podemos asegurar que se repita un resultado como el del video de Tatiana Chanta.</b> Por eso las combinamos con publicidad, que es más constante y medible.</p></div>
+      </article>
+      <article class="card icard reveal">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M8 2.5v4M16 2.5v4M8.5 14.5l2 2 4-4"/></svg></div>
+        <div><h4>Publicidad desde el segundo mes</h4><p>Le recomendamos empezar a invertir en publicidad <b>a partir del mes 2</b>. En el mes 1 dejamos lista la casa: la ficha de Google, Instagram y WhatsApp. Así, cuando alguien vea un anuncio y quiera conocer más, encontrará una clínica ordenada y lista para atenderle, y su dinero rinde más.</p></div>
+      </article>
+    </div>
+
+    <div class="card budget reveal">
+      <h4>¿Qué podemos esperar con la publicidad?</h4>
+      <p>Una referencia aproximada de cuántas personas podrían escribir a CLIFIN por WhatsApp cada mes gracias a los anuncios, según el presupuesto:</p>
+      <div class="budget-rows">
+        <div class="brow"><span class="bamt">$150 / mes</span><div class="brange" role="img" aria-label="Entre 50 y 100 conversaciones al mes"><span style="left:29%;width:30%"></span></div><span class="bval">50 a 100 conversaciones</span></div>
+        <div class="brow"><span class="bamt">$200 / mes</span><div class="brange" role="img" aria-label="Entre 65 y 130 conversaciones al mes"><span style="left:38%;width:38%"></span></div><span class="bval">65 a 130 conversaciones</span></div>
+        <div class="brow"><span class="bamt">$250 / mes</span><div class="brange" role="img" aria-label="Entre 85 y 165 conversaciones al mes"><span style="left:50%;width:47%"></span></div><span class="bval">85 a 165 conversaciones</span></div>
+      </div>
+      <p class="bnote">Es una estimación, no una promesa. Se basa en un costo aproximado de $1.50 a $3 por conversación iniciada desde un anuncio, que confirmaremos con datos reales en las primeras 2 semanas de campaña. <b>No todas las conversaciones se convierten en citas:</b> eso depende de la rapidez en responder, del precio y de lo que la persona necesita. Lo mediremos desde el primer mes para saber cuántos pacientes nuevos trae cada dólar invertido.</p>
+    </div>
   </div>
 </section>
 
@@ -587,7 +640,7 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
     </div>
 
     <div class="callout reveal" style="border-left-color:var(--amber);background:var(--amber-soft)">
-      <p><b>Importante:</b> la publicidad pagada es un cargo separado de la tarifa mensual. El dinero de los anuncios no está incluido en los $400 ni en los $550: se paga directamente a Meta (Facebook e Instagram). Recomendamos empezar con $150 a $250 al mes.</p>
+      <p><b>Importante:</b> la publicidad pagada es un cargo separado de la tarifa mensual. El dinero de los anuncios no está incluido en los $400 ni en los $550: se paga directamente a Meta (Facebook e Instagram). Recomendamos empezar con $150 a $250 al mes, <b>a partir del segundo mes</b>, para que su inversión rinda más (ver "Seamos realistas" en el capítulo 3).</p>
     </div>
 
     <div class="sub-head reveal"><div class="eyebrow">Lo que hacemos cada mes</div><h3>Incluye</h3></div>
