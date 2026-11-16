@@ -188,7 +188,7 @@ td.dash{color:var(--muted)}
   .tbl table,.tbl tbody,.tbl tr,.tbl th,.tbl td{display:block;width:100%}
   .tbl tr{border-bottom:6px solid var(--bg-brand)}
   .tbl tbody th{background:var(--blue-soft);border-bottom:0}
-  .tbl td{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}
+  .tbl td{display:flex;justify-content:flex-start;gap:12px;border-bottom:1px solid var(--line)}
   .tbl td::before{content:attr(data-label);font-weight:700;color:var(--ink-2);flex:0 0 44%}
   .tbl td.col-clifin::before{color:var(--teal-ink)}
 }
@@ -484,16 +484,17 @@ dialog.lb .x{position:fixed;top:14px;right:14px;width:46px;height:46px;border-ra
     <div class="tbl reveal">
       <table>
         <caption class="sr-only" style="position:absolute;left:-9999px">Comparación de CLIFIN con otras clínicas</caption>
-        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Fisionova Sonsonate</th><th scope="col">Hand Medic / CIRMED</th><th scope="col">Clínicas de San Salvador y Santa Ana</th><th scope="col" class="col-clifin">CLIFIN</th></tr></thead>
+        <thead><tr><th scope="col">&nbsp;</th><th scope="col">Fisionova Sonsonate</th><th scope="col">Hand Medic</th><th scope="col">CIRMED</th><th scope="col" class="col-clifin">CLIFIN</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Opiniones en Google</th><td class="dash" data-label="Fisionova">—</td><td class="dash" data-label="Hand Medic / CIRMED">—</td><td data-label="San Salvador / Santa Ana">Cientos (una tiene 935)</td><td class="col-clifin" data-label="CLIFIN">0</td></tr>
-          <tr><th scope="row">Publicidad pagada</th><td data-label="Fisionova">Sí</td><td class="dash" data-label="Hand Medic / CIRMED">—</td><td data-label="San Salvador / Santa Ana">Todos los meses</td><td class="col-clifin" data-label="CLIFIN">Empieza en el Mes 2</td></tr>
-          <tr><th scope="row">Redes activas</th><td data-label="Fisionova">Sí, responde todos los comentarios</td><td data-label="Hand Medic / CIRMED">Casi abandonadas desde hace meses</td><td class="dash" data-label="San Salvador / Santa Ana">—</td><td class="col-clifin" data-label="CLIFIN">Facebook sí; Instagram casi solo</td></tr>
-          <tr><th scope="row">Horario</th><td class="dash" data-label="Fisionova">—</td><td class="dash" data-label="Hand Medic / CIRMED">—</td><td class="dash" data-label="San Salvador / Santa Ana">—</td><td class="col-clifin" data-label="CLIFIN">Lunes a sábado de 7 a 7 + domingo con cita</td></tr>
-          <tr><th scope="row">Experiencia</th><td data-label="Fisionova">Abrió en Sonsonate este año</td><td class="dash" data-label="Hand Medic / CIRMED">—</td><td class="dash" data-label="San Salvador / Santa Ana">—</td><td class="col-clifin" data-label="CLIFIN">32 años</td></tr>
+          <tr><th scope="row">Opiniones en Google</th><td data-label="Fisionova">1 opinión</td><td data-label="Hand Medic">0</td><td data-label="CIRMED">0</td><td class="col-clifin" data-label="CLIFIN">0 (no aparece en el mapa)</td></tr>
+          <tr><th scope="row">Publicidad pagada</th><td data-label="Fisionova">Sí, con anuncios activos</td><td data-label="Hand Medic">No</td><td data-label="CIRMED">No</td><td class="col-clifin" data-label="CLIFIN">Empieza en el Mes 2</td></tr>
+          <tr><th scope="row">Redes activas</th><td data-label="Fisionova">Sí, responde todos los comentarios</td><td data-label="Hand Medic">Sin publicar desde mayo de 2026</td><td data-label="CIRMED">Sin publicar desde agosto de 2024</td><td class="col-clifin" data-label="CLIFIN">Facebook sí; Instagram casi solo</td></tr>
+          <tr><th scope="row">Horario</th><td data-label="Fisionova">Lunes a sábado de 8 a 5</td><td data-label="Hand Medic">Lunes a sábado de 8 a 5</td><td data-label="CIRMED">Lunes a viernes de 8 a 6; sábado de 8 a 12</td><td class="col-clifin" data-label="CLIFIN"><b>Lunes a sábado de 7 a 7 + domingo con cita</b></td></tr>
+          <tr><th scope="row">Experiencia</th><td data-label="Fisionova">Abrió en Sonsonate en 2026 (es su 3.ª clínica)</td><td data-label="Hand Medic">En redes desde 2024</td><td data-label="CIRMED">Dirigida por una médica especialista en rehabilitación</td><td class="col-clifin" data-label="CLIFIN"><b>32 años</b></td></tr>
         </tbody>
       </table>
     </div>
+    <p class="reveal" style="margin:10px 0 0;color:var(--ink-2);font-size:1rem">Datos públicos de Google Maps, Facebook y la biblioteca de anuncios de Facebook, revisados en noviembre de 2026.</p>
 
     <div class="grid g2 who-list">
       <article class="card reveal"><h3>Fisionova Sonsonate</h3><p>Abrió en el centro de Sonsonate este año. Hace publicidad pagada, muestra videos de pacientes contando su experiencia, salió en televisión y responde todos los comentarios. <b>Es la clínica a la que hay que prestar atención.</b></p></article>
